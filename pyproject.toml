@@ -1,0 +1,10 @@
+[project]
+name = "internal-knowledge-assistance"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11,<=3.12"
+dependencies = [
+    "fastapi>=0.133.1",
+    "langchain>=1.2.10",
+]
