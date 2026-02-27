@@ -1,0 +1,5 @@
+# name: CI - push
+
+# on:
+#   push:
+#     branches: [dev1]
