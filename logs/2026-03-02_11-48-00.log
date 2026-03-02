@@ -1,7 +1,0 @@
-{
-    "time": "2026-03-02 11:48:01,331",
-    "level": "INFO",
-    "filename": "chroma_client.py",
-    "lineno": 30,
-    "message": "{'event': 'chroma_initialized', 'collection': 'company_documents', 'persist_dir': 'chroma_db'}"
-}
