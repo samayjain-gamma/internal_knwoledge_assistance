@@ -1,0 +1,219 @@
+AcmeTech Solutions Pvt. Ltd.
+Internal Policy Repository
+
+Version: 2.0
+Effective Date: January 1, 2026
+
+SECTION HR-001
+
+Category: Leave Policy
+Department: Human Resources
+Allowed Roles: Employee, Manager, HR
+Sensitivity: Internal
+
+Annual Leave Policy
+
+All full-time employees are entitled to 18 days of Paid Time Off (PTO) per calendar year.
+
+Rules:
+
+Leave must be applied via the HR portal.
+
+Approval from direct manager is mandatory.
+
+Maximum carry forward allowed: 10 days.
+
+HR has override authority in exceptional cases.
+
+SECTION HR-002
+
+Category: Sick Leave
+Department: Human Resources
+Allowed Roles: Employee, Manager, HR
+Sensitivity: Internal
+
+Employees are entitled to 12 sick leave days annually.
+
+Medical certificate required if leave exceeds 3 consecutive days.
+
+HR may request documentation for pattern-based misuse.
+
+SECTION HR-003
+
+Category: Compensation Structure
+Department: Human Resources
+Allowed Roles: HR, Finance, Admin
+Sensitivity: Confidential
+
+Compensation consists of:
+
+Base Salary
+
+Performance Bonus
+
+Provident Fund Contribution (12%)
+
+Gratuity (as per law)
+
+Employees are NOT allowed to access salary structures of other employees.
+
+SECTION IT-001
+
+Category: System Access Control
+Department: IT
+Allowed Roles: IT, Admin
+Sensitivity: Confidential
+
+All system access provisioning must:
+
+Be requested via access management portal.
+
+Be approved by department manager.
+
+Be logged and audited quarterly.
+
+Only IT and Admin roles may modify user permissions.
+
+SECTION IT-002
+
+Category: Multi-Factor Authentication
+Department: IT
+Allowed Roles: Employee, Manager, HR, Finance, IT, Admin
+Sensitivity: Internal
+
+All employees must enable MFA for:
+
+Email
+
+Internal dashboards
+
+Code repositories
+
+Finance tools
+
+Failure to comply may result in temporary access suspension.
+
+SECTION FIN-001
+
+Category: Expense Reimbursement
+Department: Finance
+Allowed Roles: Employee, Manager, Finance
+Sensitivity: Internal
+
+Eligible expenses:
+
+Travel (economy class only)
+
+Hotel (₹7,000 per night domestic)
+
+Client meals
+
+Conference fees
+
+Reimbursement must be filed within 15 days.
+
+Finance team holds final approval authority.
+
+SECTION FIN-002
+
+Category: Budget Allocation
+Department: Finance
+Allowed Roles: Finance, Admin
+Sensitivity: Highly Confidential
+
+Quarterly departmental budgets are approved by the Admin and CFO.
+
+Budget documents must not be shared outside Finance and Admin roles.
+
+Unauthorized disclosure may result in termination.
+
+SECTION SEC-001
+
+Category: Data Classification
+Department: Security
+Allowed Roles: All
+Sensitivity: Public
+
+Data is classified into:
+
+Public
+
+Internal
+
+Confidential
+
+Highly Confidential
+
+Access control is enforced based on classification and role mapping.
+
+SECTION SEC-002
+
+Category: Data Breach Protocol
+Department: Security
+Allowed Roles: IT, Security, Admin
+Sensitivity: Highly Confidential
+
+In case of data breach:
+
+Incident must be reported within 24 hours.
+
+IT must isolate affected systems.
+
+Security team conducts forensic analysis.
+
+Admin notifies regulatory bodies if required.
+
+Employees must not communicate breach details externally.
+
+SECTION ENG-001
+
+Category: Code Repository Access
+Department: Engineering
+Allowed Roles: Engineer, Tech Lead, IT
+Sensitivity: Confidential
+
+Repository permissions:
+
+Engineers: Read/Write access to assigned projects.
+
+Tech Leads: Read/Write across department projects.
+
+IT: Administrative control.
+
+Production deployment access is restricted to Tech Lead and IT only.
+
+SECTION ADMIN-001
+
+Category: Termination Procedure
+Department: Administration
+Allowed Roles: Admin, HR
+Sensitivity: Confidential
+
+Upon resignation:
+
+Notice period: 60 days.
+
+IT must revoke system access on last working day.
+
+Finance processes final settlement within 30 days.
+
+Assets must be returned before clearance.
+
+SECTION ALL-001
+
+Category: Code of Conduct
+Department: Organization-wide
+Allowed Roles: All
+Sensitivity: Internal
+
+All employees must:
+
+Maintain professional conduct.
+
+Avoid conflict of interest.
+
+Protect company data.
+
+Comply with legal regulations.
+
+Violations may lead to disciplinary action.
