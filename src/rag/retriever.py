@@ -62,7 +62,7 @@ class Retriever:
 
 if __name__ == "__main__":
 
-    retriever = Retriever(top_k=3)
+    retriever = Retriever()
 
     while True:
         query = input("\nEnter query (or type 'exit'): ")

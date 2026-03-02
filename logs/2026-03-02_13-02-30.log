@@ -1,0 +1,140 @@
+{
+    "time": "2026-03-02 13:02:30,847",
+    "level": "INFO",
+    "filename": "chroma_client.py",
+    "lineno": 30,
+    "message": "{'event': 'chroma_initialized', 'collection': 'company_documents', 'persist_dir': 'chroma_db'}"
+}
+{
+    "time": "2026-03-02 13:02:38,018",
+    "level": "INFO",
+    "filename": "embedder.py",
+    "lineno": 16,
+    "message": "embedding started"
+}
+{
+    "time": "2026-03-02 13:02:38,458",
+    "level": "INFO",
+    "filename": "embedder.py",
+    "lineno": 24,
+    "message": "Embedding completed"
+}
+{
+    "time": "2026-03-02 13:02:38,482",
+    "level": "INFO",
+    "filename": "repository.py",
+    "lineno": 57,
+    "message": "{'event': 'vector_query', 'top_k': 4}"
+}
+{
+    "time": "2026-03-02 13:02:38,483",
+    "level": "INFO",
+    "filename": "retriever.py",
+    "lineno": 50,
+    "message": "{'event': 'retrieval_success', 'query': 'Leave policy', 'results_count': 4}"
+}
+{
+    "time": "2026-03-02 13:02:38,483",
+    "level": "INFO",
+    "filename": "generator.py",
+    "lineno": 22,
+    "message": "generation part activated"
+}
+{
+    "time": "2026-03-02 13:03:05,092",
+    "level": "INFO",
+    "filename": "generator.py",
+    "lineno": 43,
+    "message": "{'event': 'generation_success', 'query': 'Leave policy'}"
+}
+{
+    "time": "2026-03-02 13:03:05,094",
+    "level": "INFO",
+    "filename": "generator.py",
+    "lineno": 50,
+    "message": "generation part ended"
+}
+{
+    "time": "2026-03-02 13:03:26,523",
+    "level": "INFO",
+    "filename": "embedder.py",
+    "lineno": 16,
+    "message": "embedding started"
+}
+{
+    "time": "2026-03-02 13:03:26,588",
+    "level": "INFO",
+    "filename": "embedder.py",
+    "lineno": 24,
+    "message": "Embedding completed"
+}
+{
+    "time": "2026-03-02 13:03:26,591",
+    "level": "INFO",
+    "filename": "repository.py",
+    "lineno": 57,
+    "message": "{'event': 'vector_query', 'top_k': 4}"
+}
+{
+    "time": "2026-03-02 13:03:26,591",
+    "level": "INFO",
+    "filename": "retriever.py",
+    "lineno": 50,
+    "message": "{'event': 'retrieval_success', 'query': '\\x1b[A\\x1b[A\\x1b[B\\x1b[B', 'results_count': 4}"
+}
+{
+    "time": "2026-03-02 13:03:26,591",
+    "level": "INFO",
+    "filename": "generator.py",
+    "lineno": 22,
+    "message": "generation part activated"
+}
+{
+    "time": "2026-03-02 13:03:42,895",
+    "level": "INFO",
+    "filename": "generator.py",
+    "lineno": 43,
+    "message": "{'event': 'generation_success', 'query': '\\x1b[A\\x1b[A\\x1b[B\\x1b[B'}"
+}
+{
+    "time": "2026-03-02 13:03:42,895",
+    "level": "INFO",
+    "filename": "generator.py",
+    "lineno": 50,
+    "message": "generation part ended"
+}
+{
+    "time": "2026-03-02 13:03:48,896",
+    "level": "INFO",
+    "filename": "embedder.py",
+    "lineno": 16,
+    "message": "embedding started"
+}
+{
+    "time": "2026-03-02 13:03:48,973",
+    "level": "INFO",
+    "filename": "embedder.py",
+    "lineno": 24,
+    "message": "Embedding completed"
+}
+{
+    "time": "2026-03-02 13:03:48,974",
+    "level": "INFO",
+    "filename": "repository.py",
+    "lineno": 57,
+    "message": "{'event': 'vector_query', 'top_k': 4}"
+}
+{
+    "time": "2026-03-02 13:03:48,975",
+    "level": "INFO",
+    "filename": "retriever.py",
+    "lineno": 50,
+    "message": "{'event': 'retrieval_success', 'query': 'What is the company name', 'results_count': 4}"
+}
+{
+    "time": "2026-03-02 13:03:48,975",
+    "level": "INFO",
+    "filename": "generator.py",
+    "lineno": 22,
+    "message": "generation part activated"
+}

@@ -1,0 +1,35 @@
+{
+    "time": "2026-03-02 11:49:16,699",
+    "level": "INFO",
+    "filename": "chroma_client.py",
+    "lineno": 30,
+    "message": "{'event': 'chroma_initialized', 'collection': 'company_documents', 'persist_dir': 'chroma_db'}"
+}
+{
+    "time": "2026-03-02 11:49:23,819",
+    "level": "INFO",
+    "filename": "embedder.py",
+    "lineno": 16,
+    "message": "embedding started"
+}
+{
+    "time": "2026-03-02 11:49:24,308",
+    "level": "INFO",
+    "filename": "embedder.py",
+    "lineno": 24,
+    "message": "Embedding completed"
+}
+{
+    "time": "2026-03-02 11:49:24,308",
+    "level": "ERROR",
+    "filename": "retriever.py",
+    "lineno": 60,
+    "message": "Retrieval failed"
+}
+{
+    "time": "2026-03-02 11:49:24,309",
+    "level": "ERROR",
+    "filename": "exception.py",
+    "lineno": 19,
+    "message": "{'error': \"'VectorRepository' object is not callable\", 'file': '/home/my/ai_projects/internal_knowledge_assistance/src/rag/retriever.py', 'line': 30, 'trace': 'Traceback (most recent call last):\\n  File \"/home/my/ai_projects/internal_knowledge_assistance/src/rag/retriever.py\", line 30, in retrieve\\n    results = self.repo(\\n              ^^^^^^^^^^\\nTypeError: \\'VectorRepository\\' object is not callable\\n'}"
+}

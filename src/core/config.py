@@ -20,7 +20,7 @@ class Settings(BaseSettings):
 
     ## LLM (Ollama - Phi)
     OLLAMA_BASE_URL: str = "http://localhost:11434"
-    LLM_MODEL: str = "phi3"
+    LLM_MODEL: str = "tinyllama"
     LLM_TEMPERATURE: float = 0.2
     LLM_MAX_TOKENS: int = 512
     # LLM_TIMEOUT: int = 60

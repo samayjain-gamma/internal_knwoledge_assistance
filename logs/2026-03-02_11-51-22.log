@@ -1,0 +1,35 @@
+{
+    "time": "2026-03-02 11:51:22,871",
+    "level": "INFO",
+    "filename": "chroma_client.py",
+    "lineno": 30,
+    "message": "{'event': 'chroma_initialized', 'collection': 'company_documents', 'persist_dir': 'chroma_db'}"
+}
+{
+    "time": "2026-03-02 11:51:29,254",
+    "level": "INFO",
+    "filename": "embedder.py",
+    "lineno": 16,
+    "message": "embedding started"
+}
+{
+    "time": "2026-03-02 11:51:29,337",
+    "level": "INFO",
+    "filename": "embedder.py",
+    "lineno": 24,
+    "message": "Embedding completed"
+}
+{
+    "time": "2026-03-02 11:51:29,338",
+    "level": "ERROR",
+    "filename": "retriever.py",
+    "lineno": 61,
+    "message": "Retrieval failed"
+}
+{
+    "time": "2026-03-02 11:51:29,338",
+    "level": "ERROR",
+    "filename": "exception.py",
+    "lineno": 19,
+    "message": "{'error': \"name 'querry_embedding' is not defined\", 'file': '/home/my/ai_projects/internal_knowledge_assistance/src/rag/retriever.py', 'line': 32, 'trace': 'Traceback (most recent call last):\\n  File \"/home/my/ai_projects/internal_knowledge_assistance/src/rag/retriever.py\", line 32, in retrieve\\n    query_embedding=querry_embedding,\\n                    ^^^^^^^^^^^^^^^^\\nNameError: name \\'querry_embedding\\' is not defined\\n'}"
+}

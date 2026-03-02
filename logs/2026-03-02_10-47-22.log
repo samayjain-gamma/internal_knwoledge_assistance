@@ -1,0 +1,42 @@
+{
+    "time": "2026-03-02 10:47:23,960",
+    "level": "INFO",
+    "filename": "chroma_client.py",
+    "lineno": 30,
+    "message": "{'event': 'chroma_initialized', 'collection': 'company_documents', 'persist_dir': 'chroma_db'}"
+}
+{
+    "time": "2026-03-02 10:47:23,960",
+    "level": "INFO",
+    "filename": "pipeline.py",
+    "lineno": 25,
+    "message": "data ingestion pipeline started for file company_policy.txt"
+}
+{
+    "time": "2026-03-02 10:47:23,960",
+    "level": "ERROR",
+    "filename": "loader.py",
+    "lineno": 17,
+    "message": "Failed to load file"
+}
+{
+    "time": "2026-03-02 10:47:23,961",
+    "level": "ERROR",
+    "filename": "exception.py",
+    "lineno": 18,
+    "message": "{'error': \"[Errno 2] No such file or directory: 'company_policy.txt'\", 'file': '/home/my/ai_projects/internal_knowledge_assistance/src/ingestion/loader.py', 'line': 15, 'trace': 'Traceback (most recent call last):\\n  File \"/home/my/ai_projects/internal_knowledge_assistance/src/ingestion/loader.py\", line 15, in load_text_file\\n    return Path(file_path).read_text(encoding=\"utf-8\")\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/home/my/.local/share/uv/python/cpython-3.11.14-linux-x86_64-gnu/lib/python3.11/pathlib.py\", line 1058, in read_text\\n    with self.open(mode=\\'r\\', encoding=encoding, errors=errors) as f:\\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/home/my/.local/share/uv/python/cpython-3.11.14-linux-x86_64-gnu/lib/python3.11/pathlib.py\", line 1044, in open\\n    return io.open(self, mode, buffering, encoding, errors, newline)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nFileNotFoundError: [Errno 2] No such file or directory: \\'company_policy.txt\\'\\n'}"
+}
+{
+    "time": "2026-03-02 10:47:23,962",
+    "level": "ERROR",
+    "filename": "pipeline.py",
+    "lineno": 47,
+    "message": "Error occured in data ingestion pipeline"
+}
+{
+    "time": "2026-03-02 10:47:23,962",
+    "level": "ERROR",
+    "filename": "exception.py",
+    "lineno": 18,
+    "message": "{'error': \"[Errno 2] No such file or directory: 'company_policy.txt'\", 'file': '/home/my/ai_projects/internal_knowledge_assistance/src/ingestion/pipeline.py', 'line': 27, 'trace': 'Traceback (most recent call last):\\n  File \"/home/my/ai_projects/internal_knowledge_assistance/src/ingestion/loader.py\", line 15, in load_text_file\\n    return Path(file_path).read_text(encoding=\"utf-8\")\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/home/my/.local/share/uv/python/cpython-3.11.14-linux-x86_64-gnu/lib/python3.11/pathlib.py\", line 1058, in read_text\\n    with self.open(mode=\\'r\\', encoding=encoding, errors=errors) as f:\\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/home/my/.local/share/uv/python/cpython-3.11.14-linux-x86_64-gnu/lib/python3.11/pathlib.py\", line 1044, in open\\n    return io.open(self, mode, buffering, encoding, errors, newline)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nFileNotFoundError: [Errno 2] No such file or directory: \\'company_policy.txt\\'\\n\\nDuring handling of the above exception, another exception occurred:\\n\\nTraceback (most recent call last):\\n  File \"/home/my/ai_projects/internal_knowledge_assistance/src/ingestion/pipeline.py\", line 27, in ingest_file\\n    raw_text = self.loader.load_text_file(file_path)\\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/home/my/ai_projects/internal_knowledge_assistance/src/ingestion/loader.py\", line 18, in load_text_file\\n    raise CustomException(e)\\nsrc.core.exception.CustomException: [Errno 2] No such file or directory: \\'company_policy.txt\\'\\n'}"
+}

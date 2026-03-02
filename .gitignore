@@ -13,3 +13,5 @@ wheels/
 .git
 
 uv.lock
+
+research/ques.txt

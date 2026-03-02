@@ -4,6 +4,7 @@ import ollama
 
 from src.core.config import get_settings
 from src.core.exception import CustomException
+from src.core.llm.llm_provider import get_llm
 from src.core.logger import logger
 from src.prompts.rag_prompts import build_grounded_rag_prompt
 
@@ -13,27 +14,22 @@ variables = get_settings()
 class Generator:
     """ """
 
-    def __init__(self, model_name: str = variables.LLM_MODEL):
-        self.model_name = model_name
+    def __init__(self):
+        self.llm = get_llm()
 
     def generate(self, query: str, contexts: List[Dict]) -> str:
         try:
             logger.info("generation part activated")
             prompt = build_grounded_rag_prompt(query, contexts)
 
-            stream = ollama.chat(
-                model=self.model_name,
-                messages=[{"role": "user", "content": prompt}],
-                stream=True,
-            )
-
-            full_response = ""
+            messages = [{"role": "user", "content": prompt}]
 
             print("\nAnswer:\n")
             print("-" * 60)
 
-            for chunk in stream:
-                token = chunk["message"]["content"]
+            full_response = ""
+
+            for token in self.llm.stream(messages):
                 print(token, end="", flush=True)
                 full_response += token
 
@@ -46,14 +42,8 @@ class Generator:
                 }
             )
 
-            logger.info("generation part ended")
             return full_response
 
         except Exception as e:
             logger.error("Generation failed")
             raise CustomException(e)
-
-    # OLLAMA_BASE_URL: str = "http://localhost:11434"
-    # LLM_MODEL: str = "phi3"
-    # LLM_TEMPERATURE: float = 0.2
-    # LLM_MAX_TOKENS: int = 512
