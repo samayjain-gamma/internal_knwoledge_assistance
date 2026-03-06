@@ -2,9 +2,6 @@ from typing import Dict, List
 
 
 class SessionStore:
-    """
-    Simple in-memory chat history store.
-    """
 
     def __init__(self):
         self.history: List[Dict[str, str]] = []

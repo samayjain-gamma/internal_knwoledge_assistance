@@ -42,7 +42,7 @@ class Retriever:
                     {
                         "content": doc,
                         "metadata": meta,
-                        "score": dist,
+                        # "score": dist,
                     }
                 )
             logger.info(

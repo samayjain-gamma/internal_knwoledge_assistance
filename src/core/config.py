@@ -1,5 +1,3 @@
-# core/config.py
-
 from functools import lru_cache
 from pathlib import Path
 
@@ -18,11 +16,11 @@ class Settings(BaseSettings):
     APP_VERSION: str = "1.0.0"
     DEBUG: bool = False
 
-    ## LLM (Ollama - Phi)
+    ## LLM (Ollama -> tinyllama , phi)
     OLLAMA_BASE_URL: str = "http://localhost:11434"
-    LLM_MODEL: str = "tinyllama"
+    LLM_MODEL: str = "phi"
     LLM_TEMPERATURE: float = 0.2
-    LLM_MAX_TOKENS: int = 512
+    # LLM_MAX_TOKENS: int = 512
     # LLM_TIMEOUT: int = 60
 
     ## Embedding Model (Ollama or other)
@@ -33,7 +31,7 @@ class Settings(BaseSettings):
     CHROMA_PERSIST_DIR: Path = Path("./chroma_db")
 
     ## Retrieval
-    RETRIEVAL_TOP_K: int = 4
+    RETRIEVAL_TOP_K: int = 2
     CHUNK_SIZE: int = 800
     CHUNK_OVERLAP: int = 150
 
@@ -41,14 +39,12 @@ class Settings(BaseSettings):
     MAX_HISTORY_TURNS: int = 5
 
     ## Guardrails
-    MAX_QUERY_LENGTH: int = 1000
+    # MAX_QUERY_LENGTH: int = 1000
     # MAX_RETRIES: int = 2
     # ENABLE_INJECTION_DETECTION: bool = True
     # ENABLE_GROUNDING_VALIDATION: bool = True
     # ENABLE_CITATION_VALIDATION: bool = True
 
-    ## Monitoring
-    ENABLE_METRICS: bool = True
     LATENCY_WARNING_THRESHOLD: float = 5.0  # seconds
 
     class Config:

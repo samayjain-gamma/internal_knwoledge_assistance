@@ -1,8 +1,11 @@
 from typing import Any, Dict, List
 
+from src.core.config import get_settings
 from src.core.exception import CustomException
 from src.core.logger import logger
 from src.db.chroma_client import ChromaClientManager
+
+variables = get_settings()
 
 
 class VectorRepository:
@@ -14,7 +17,8 @@ class VectorRepository:
         try:
             self.collection = ChromaClientManager().get_collection()
         except Exception as e:
-            raise CustomException("VectorRepository initialization failed", e)
+            logger.error("VectorRepository initialization failed")
+            raise CustomException(e)
 
     def add_documents(
         self,
@@ -44,7 +48,7 @@ class VectorRepository:
     def query(
         self,
         query_embedding: List[float],
-        top_k: int = 4,
+        top_k: int = variables.RETRIEVAL_TOP_K,
         where: Dict[str, Any] = None,
     ):
         try:

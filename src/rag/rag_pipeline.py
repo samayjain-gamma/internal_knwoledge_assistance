@@ -65,7 +65,6 @@ class ConversationalRAG:
 
 
 if __name__ == "__main__":
-
     try:
         rag = ConversationalRAG()
         logger.info("Entered into Conversational Rag system")

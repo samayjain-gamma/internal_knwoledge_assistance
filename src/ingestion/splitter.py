@@ -42,7 +42,7 @@ from src.core.logger import logger
 
 class SemanticTextSplitter:
 
-    def __init__(self, chunk_size: int = 800, chunk_overlap_sentences: int = 1):
+    def __init__(self, chunk_size: int = 800, chunk_overlap_sentences: int = 50):
         self.chunk_size = chunk_size
         self.chunk_overlap_sentences = chunk_overlap_sentences
 
@@ -53,6 +53,7 @@ class SemanticTextSplitter:
 
             for para in paragraphs:
                 para = para.strip()
+
                 if not para:
                     continue
 

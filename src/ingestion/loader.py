@@ -25,7 +25,7 @@ class DocumentLoader:
         """
         try:
             texts = []
-            for path in Path(directory_path).rglob("*.txt"):  # rglob - recursive glob
+            for path in Path(directory_path).rglob("*.txt"):
                 texts.append(path.read_text(encoding="utf-8"))
             return texts
         except Exception as e:
