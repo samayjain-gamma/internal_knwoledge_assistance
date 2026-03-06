@@ -9,9 +9,6 @@ from src.memory.session_store import SessionStore
 from src.rag.generator import Generator
 from src.rag.retriever import Retriever
 
-# from src.core.exception import CustomException
-
-
 input_validator = InputValidator()
 query_rewriter = QueryRewriter()
 retriever = Retriever()
@@ -27,14 +24,12 @@ def get_user_input(state):
 
 
 def check_exit(state):
-    print("Entered into check_exit  router")
     text = state["user_input"]
 
     if text == "exit":
         print("User entered 'exit', exiting from chat")
         return {"exit": True}
 
-    print("Exiting from check_exit check")
     return {"exit": False, "query": text}
 
 
@@ -43,21 +38,16 @@ def exit_router(state):
 
 
 def validate_input(state: Dict):
-    print("Entered into validate_input router")
     query = state["query"]
-    print("query in validate input router : ", query)
     is_valid = input_validator.validate(query=query)
-    print("query is valid or not : ", is_valid)
     return {"input_validation_flag": is_valid}
 
 
 def input_validation_check(state):
-    print("Enterd into input validation check router")
     return state["input_validation_flag"]
 
 
 def detect_injection(state):
-    logger.info("running injection detection")
     query = state["query"]
 
     flag = injection_detector.detect(query=query)
@@ -65,7 +55,6 @@ def detect_injection(state):
 
 
 def detect_injection_check(state):
-    print("Entered in to detect injection router check")
     if state["injection_flag"]:
         print("User entered change configuratin prompt")
     return state["injection_flag"]
@@ -76,6 +65,7 @@ def rewrite_query(state):
     print("rewrite_query")
     query = state["query"]
     history = state.get("history", [])
+    print(f"Chat History :\n{history}")
 
     if history:
         rewritten = query_rewriter.rewrite(chat_history=history, new_question=query)
@@ -106,9 +96,7 @@ def generate_answer(state: Dict):
 def update_history(state):
 
     history = state.get("history", [])
-
     history.append({"role": "user", "content": state["rewritten_query"]})
-
     history.append({"role": "assistant", "content": state["generated_answer"]})
 
     return {"history": history}

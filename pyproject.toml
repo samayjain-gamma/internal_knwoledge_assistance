@@ -11,4 +11,5 @@ dependencies = [
     "langchain-ollama>=1.0.1",
     "pre-commit>=4.5.1",
     "pydantic-settings>=2.13.1",
+    "uvicorn>=0.41.0",
 ]

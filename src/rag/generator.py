@@ -6,13 +6,12 @@ from src.core.config import get_settings
 from src.core.exception import CustomException
 from src.core.llm.llm_provider import get_llm
 from src.core.logger import logger
-from src.prompts.rag_prompts import build_grounded_rag_prompt
+from src.prompts.answer_prompt import answer_prompt
 
 variables = get_settings()
 
 
 class Generator:
-    """ """
 
     def __init__(self):
         self.llm = get_llm()
@@ -20,7 +19,7 @@ class Generator:
     def generate(self, query: str, contexts: List[Dict]) -> str:
         try:
             logger.info("generation part activated")
-            prompt = build_grounded_rag_prompt(query, contexts)
+            prompt = answer_prompt.format(query=query, context_block=contexts)
 
             messages = [{"role": "user", "content": prompt}]
 

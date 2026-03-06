@@ -9,9 +9,6 @@ variables = get_settings()
 
 
 class VectorRepository:
-    """
-    Abstracts all vector database operations.
-    """
 
     def __init__(self):
         try:
