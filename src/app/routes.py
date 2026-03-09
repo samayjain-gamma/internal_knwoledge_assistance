@@ -6,6 +6,8 @@ router = APIRouter()
 
 
 @router.post("/chat")
-async def chat(request: str, graph=Depends(get_graph)):
+async def chat(graph=Depends(get_graph)):
 
     result = graph.invoke({})
+
+    return result.get("generated_answer")

@@ -25,7 +25,7 @@ class InjectionDetector:
 
             for pattern in cls.SUSPICIOUS_PATTERNS:
                 if re.search(pattern, lowered):
-                    logger.error(f"{query}Potential prompt injection detected.")
+                    logger.error(f"{query} -> Potential prompt injection detected.")
                     return True
             logger.info(f"{query} is safe")
             return False

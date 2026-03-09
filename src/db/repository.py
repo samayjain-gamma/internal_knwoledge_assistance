@@ -32,12 +32,7 @@ class VectorRepository:
                 metadatas=metadatas,
             )
 
-            logger.info(
-                {
-                    "event": "documents_added",
-                    "count": len(ids),
-                }
-            )
+            logger.info({"event": "documents_added", "count": len(ids)})
 
         except Exception as e:
             raise CustomException(e)
@@ -55,12 +50,7 @@ class VectorRepository:
                 where=where,
             )
 
-            logger.info(
-                {
-                    "event": "vector_query",
-                    "top_k": top_k,
-                }
-            )
+            logger.info({"event": "vector_query", "top_k": top_k})
 
             return results
 

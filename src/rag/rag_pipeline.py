@@ -1,8 +1,11 @@
+import time
+
 from src.core.config import get_settings
 from src.core.exception import CustomException
 from src.core.logger import logger
 from src.memory.query_rewriter import QueryRewriter
 from src.memory.session_store import SessionStore
+from src.monitoring.metrics import RAG_ERRORS, REQUEST_COUNT
 from src.rag.generator import Generator
 from src.rag.retriever import Retriever
 
@@ -11,7 +14,8 @@ variables = get_settings()
 
 class RAGPipeline:
     """
-    This is the RAG pipeline
+    thiw is a rag pipeline
+    not a conversational one
     """
 
     def __init__(self):
@@ -45,6 +49,10 @@ class ConversationalRAG:
         self.rewriter = QueryRewriter()
 
     def ask(self, question: str) -> str:
+
+        REQUEST_COUNT.inc()
+        start = time.time()
+
         if self.memory.get_history():
             standalone_query = self.rewriter.rewrite(
                 self.memory.get_history(), question

@@ -14,6 +14,7 @@ from src.graph.nodes import (
     validate_input,
 )
 from src.graph.state import GraphState
+from src.monitoring.metrics import start_metrics_server
 
 
 def build_graph():
@@ -61,6 +62,8 @@ def build_graph():
 
 
 if __name__ == "__main__":
+
+    start_metrics_server()
     graph = build_graph()
 
     graph.invoke({})

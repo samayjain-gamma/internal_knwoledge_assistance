@@ -18,7 +18,7 @@ memory = SessionStore()
 
 
 def get_user_input(state):
-    user_input = input("User:")
+    user_input = input("User (type exit to exit from chat ):")
     user_input = user_input.strip().lower()
     return {"user_input": user_input}
 
@@ -65,7 +65,6 @@ def rewrite_query(state):
     print("rewrite_query")
     query = state["query"]
     history = state.get("history", [])
-    print(f"Chat History :\n{history}")
 
     if history:
         rewritten = query_rewriter.rewrite(chat_history=history, new_question=query)
